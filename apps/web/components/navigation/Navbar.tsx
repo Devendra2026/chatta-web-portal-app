@@ -138,8 +138,8 @@ export default function Navbar() {
               className="w-12 h-12 shrink-0 object-contain bg-white rounded-full p-1"
             />
           <div className="leading-none text-left">
-            <span className="text-[10px] text-gov-saffron uppercase font-bold block">Kashganj Portal</span>
-            <span className="text-xs font-extrabold uppercase tracking-wide block">Nagar Panchayat, Bhargain , Kashganj</span>
+            <span className="text-[10px] text-gov-saffron uppercase font-bold block">Chhata Portal</span>
+            <span className="text-xs font-extrabold uppercase tracking-wide block">Nagar Panchayat, Chhata , Mathura</span>
           </div>
         </Link>
 
@@ -195,7 +195,7 @@ export default function Navbar() {
                             {item.name} gateway
                           </h4>
                           <p className="text-xs text-slate-200 leading-relaxed">
-                           Nagar Panchayat, Bhargain, Kashganj Administrative services are unified online. Browse details, download documents, and apply securely.
+                           Nagar Panchayat, Chhata , Mathura Administrative services are unified online. Browse details, download documents, and apply securely.
                           </p>
                         </div>
                         <div className="text-[10px] text-slate-300 font-bold uppercase tracking-widest border-t border-white/10 pt-4 mt-4">

@@ -12,16 +12,16 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@workspace/ui/components/button"
-// import { useAdminAccess } from "@/hooks/use-admin-access"
+import { useAdminAccess } from "@/hooks/use-admin-access"
 import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
 
 export default function Header() {
   const { isSignedIn } = useUser()
-  // const { access } = useAdminAccess()
+  const { access } = useAdminAccess()
   const [activeModal, setActiveModal] = useState<string | null>(null)
   const [searchQuery, setSearchQuery] = useState("")
-  // const canSeeDashboard = Boolean(isSignedIn && access?.isAllowed)
+  const canSeeDashboard = Boolean(isSignedIn && access?.isAllowed)
 
   const closeModal = () => {
     setActiveModal(null)
