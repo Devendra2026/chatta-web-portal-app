@@ -1,0 +1,33 @@
+name: chhata-backend
+
+services:
+
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - postgres # Prevents FastAPI from booting up until the container named 'postgres' is ready
+
+  postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    ports:
+      - "${POSTGRES_PORT:-5431}:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-mathura_chhata_db}
+    volumes:
+      - mathura_chhata_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-mathura_chhata_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  mathura_chhata_data:
+    name: mathura_chhata_data  # forces to take exact volume name 

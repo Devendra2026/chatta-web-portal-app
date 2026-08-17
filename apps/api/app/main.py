@@ -1,0 +1,56 @@
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+import time
+from fastapi import Request
+
+from app.api.router import api_router
+from app.core.config import settings
+from app.crud.rbac import seed_default_rbac
+from app.db.base import Base
+from app.db.session import SessionLocal, engine
+
+
+def create_app() -> FastAPI:
+    Base.metadata.create_all(bind=engine)
+    with SessionLocal() as db:
+        seed_default_rbac(db)
+
+    app = FastAPI(title=settings.app_name)
+    
+    #to check how much time request took to response -->
+    @app.middleware("http")
+    async def log_request_time(request: Request, call_next):
+        start = time.perf_counter()
+
+        response = await call_next(request)
+
+        duration_ms = (time.perf_counter() - start) * 1000
+        print(
+            f"{request.method} {request.url.path} "
+            f"status={response.status_code} "
+            f"took={duration_ms:.2f}ms"
+        )
+
+        return response
+
+    allowed_origins = [
+        settings.frontend_origin.rstrip("/"),
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        ]
+
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=allowed_origins,  # settings.frontend_origin or use 'frontend domain'
+        allow_credentials=True,
+        allow_methods=["GET","POST","PUT","PATCH","DELETE","OPTIONS",], #use '*' if it restricts some methods  means allowe every methods
+        allow_headers=["Accept","Content-Type","Authorization"],   #use '*' if it restricts some headers  means allowe every header
+    )
+
+
+    app.include_router(api_router, prefix="/api")
+
+    return app
+
+
+app = create_app()
