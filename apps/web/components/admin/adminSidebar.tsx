@@ -101,7 +101,7 @@ export default function AdminSidebar() {
 
         <div>
           <h2 className="font-bold text-slate-900">
-            Nagar Panchayat , Bhargain , Kashganj , Uttar Pradesh
+            Nagar Panchayat , Chhata , Mathura , Uttar Pradesh
           </h2>
 
           <p className="text-xs text-slate-500">
