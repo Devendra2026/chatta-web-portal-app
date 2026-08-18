@@ -8,7 +8,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
-      // Agar aapko aur bhi koi external domain allow karna ho toh yahan add kar sakte hain
+      {
+        protocol: "https",
+        hostname: "encrypted-tbn0.gstatic.com", // <-- इसे यहाँ जोड़ दें
+      },
     ],
   },
 }

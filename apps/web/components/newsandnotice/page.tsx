@@ -1,3 +1,4 @@
+
 "use client"
 
 import { m, AnimatePresence } from "framer-motion"
@@ -157,9 +158,9 @@ export default function NewsAndNotice() {
               <span>Nagar Panchayat Chhata • Mathura</span>
             </div>
             <h2 className="font-serif text-3xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
-               Major National Announcements{" "}
+              Major National Announcements{" "}
               <span className="bg-gradient-to-r from-orange-600 via-amber-600 to-blue-600 bg-clip-text text-transparent">
-                 & Government Updates
+                & Government Updates
               </span>
             </h2>
           </div>
@@ -199,12 +200,13 @@ export default function NewsAndNotice() {
                   className="group relative cursor-pointer overflow-hidden rounded-3xl border border-slate-200 bg-white p-5 shadow-xl transition-all duration-300 hover:border-orange-500/50 hover:shadow-2xl"
                 >
                   <div className="flex flex-col items-center gap-5 sm:flex-row">
-                    {/* Image Container */}
+                    {/* Image Container with sizes prop added */}
                     <div className="relative h-44 w-full shrink-0 overflow-hidden rounded-2xl border border-slate-200 sm:w-48">
                       <Image
                         src={news.image}
                         alt={news.title}
                         fill
+                        sizes="(max-width: 640px) 100vw, 192px"
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
@@ -259,6 +261,7 @@ export default function NewsAndNotice() {
             {/* Filter Tabs */}
             <div className="flex flex-wrap gap-2 rounded-2xl border border-slate-200 bg-white p-1.5 shadow-sm">
               <button
+                type="button"
                 onClick={() => setActiveTab("all")}
                 className={`flex-1 rounded-xl px-3 py-2 text-xs font-bold transition-all ${
                   activeTab === "all"
@@ -269,6 +272,7 @@ export default function NewsAndNotice() {
                 सभी
               </button>
               <button
+                type="button"
                 onClick={() => setActiveTab("tender")}
                 className={`flex-1 rounded-xl px-3 py-2 text-xs font-bold transition-all ${
                   activeTab === "tender"
@@ -279,6 +283,7 @@ export default function NewsAndNotice() {
                 टेंडर
               </button>
               <button
+                type="button"
                 onClick={() => setActiveTab("circular")}
                 className={`flex-1 rounded-xl px-3 py-2 text-xs font-bold transition-all ${
                   activeTab === "circular"
@@ -323,6 +328,7 @@ export default function NewsAndNotice() {
                     </div>
 
                     <button
+                      type="button"
                       onClick={() =>
                         alert(`Downloading document: ${notice.refNo}`)
                       }
@@ -354,6 +360,7 @@ export default function NewsAndNotice() {
                   src={selectedNews.image}
                   alt={selectedNews.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 600px"
                   className="object-cover"
                 />
               </div>
@@ -372,6 +379,7 @@ export default function NewsAndNotice() {
 
               <div className="mt-6 flex justify-end">
                 <button
+                  type="button"
                   onClick={() => setSelectedNews(null)}
                   className="rounded-xl bg-orange-600 px-5 py-2 text-xs font-bold text-white shadow-md transition-colors hover:bg-orange-700"
                 >

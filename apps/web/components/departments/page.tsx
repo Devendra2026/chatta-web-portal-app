@@ -124,7 +124,7 @@ export default function Departments() {
           </span>
 
           <h2 className="font-serif text-3xl font-black tracking-tight text-slate-900 md:text-5xl">
-           Digital Services of Chhata, Mathura{" "}
+           Departments of Chhata, Mathura{" "}
           </h2>
 
           <p className="text-sm font-medium text-slate-600 md:text-base">
