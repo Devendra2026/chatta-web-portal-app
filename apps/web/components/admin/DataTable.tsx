@@ -1,7 +1,6 @@
 "use client"
 
-import { useState } from "react"
-import type { ColumnDef } from "@tanstack/react-table"
+import type { Cell, ColumnDef, Header, HeaderGroup, Row } from "@tanstack/react-table"
 import {
   flexRender,
   getCoreRowModel,
@@ -10,9 +9,10 @@ import {
   useReactTable,
 } from "@tanstack/react-table"
 import { ChevronLeft, ChevronRight, Inbox, Search } from "lucide-react"
+import { useState } from "react"
 
 interface DataTableProps<TData> {
-  columns: ColumnDef<TData>[]
+  columns: ColumnDef<TData, unknown>[]
   data: TData[]
   searchPlaceholder?: string
   emptyMessage?: string
@@ -76,9 +76,9 @@ export default function DataTable<TData>({
       <div className="overflow-x-auto">
         <table className="w-full min-w-[1000px] text-left text-sm">
           <thead className="bg-slate-50">
-            {table.getHeaderGroups().map((headerGroup) => (
+            {table.getHeaderGroups().map((headerGroup: HeaderGroup<TData>) => (
               <tr key={headerGroup.id}>
-                {headerGroup.headers.map((header) => (
+                {headerGroup.headers.map((header: Header<TData, unknown>) => (
                   <th
                     key={header.id}
                     className="border-b border-slate-200 px-5 py-4 font-semibold whitespace-nowrap text-slate-600"
@@ -97,12 +97,12 @@ export default function DataTable<TData>({
 
           <tbody>
             {table.getRowModel().rows.length > 0 ? (
-              table.getRowModel().rows.map((row) => (
+              table.getRowModel().rows.map((row: Row<TData>) => (
                 <tr
                   key={row.id}
                   className="border-b border-slate-100 transition last:border-none hover:bg-slate-50"
                 >
-                  {row.getVisibleCells().map((cell) => (
+                  {row.getVisibleCells().map((cell: Cell<TData, unknown>) => (
                     <td
                       key={cell.id}
                       className="px-5 py-4 align-middle text-slate-600"

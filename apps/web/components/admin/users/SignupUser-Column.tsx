@@ -1,6 +1,6 @@
 "use client"
 
-import type { ColumnDef, StockFeatures } from "@tanstack/react-table"
+import type { ColumnDef} from "@tanstack/react-table"
 
 import type { RoleOption, SignupUser } from "@/types/admin-user"
 
@@ -15,7 +15,7 @@ type SignupUserColumnPermissions = {
 export function createSignupUserColumns(
   roleOptions: RoleOption[],
   permissions: SignupUserColumnPermissions
-): ColumnDef<StockFeatures, SignupUser>[] {
+): ColumnDef<SignupUser>[] {
   return [
     {
       id: "serialNumber",

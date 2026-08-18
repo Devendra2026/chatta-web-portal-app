@@ -157,9 +157,9 @@ export default function NewsAndNotice() {
               <span>Nagar Panchayat Chhata • Mathura</span>
             </div>
             <h2 className="font-serif text-3xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
-              ताज़ा खबरें एवं{" "}
+               Major National Announcements{" "}
               <span className="bg-gradient-to-r from-orange-600 via-amber-600 to-blue-600 bg-clip-text text-transparent">
-                सार्वजनिक सूचनाएं
+                 & Government Updates
               </span>
             </h2>
           </div>
@@ -183,7 +183,7 @@ export default function NewsAndNotice() {
                 </h3>
               </div>
               <span className="text-xs font-semibold text-slate-500">
-                अपडेटेड जून २०२६
+                अपडेटेड जून 2026
               </span>
             </div>
 

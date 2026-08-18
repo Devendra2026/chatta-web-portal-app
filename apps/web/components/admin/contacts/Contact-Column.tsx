@@ -1,10 +1,10 @@
 "use client"
 
-import type { ColumnDef, StockFeatures } from "@tanstack/react-table"
+import type { ColumnDef} from "@tanstack/react-table"
 import type { Contact } from "@/types/contact"
 import ContactActions from "./Contact-Actions"
 
-export const contactColumns: ColumnDef<StockFeatures, Contact>[] = [
+export const contactColumns: ColumnDef<Contact>[] = [
   {
     id: "serialNumber",
     header: "Sr. No.",

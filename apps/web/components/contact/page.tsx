@@ -90,7 +90,7 @@ export default function ContactUs() {
 
           <p className="mx-auto max-w-2xl text-sm font-medium text-slate-500 md:text-base">
             Your feedback and queries help us serve you better. Contact Nagar
-            Panchayat, Bhargain, Kashganj anytime.
+            Panchayat, Chhata, Mathura anytime.
           </p>
 
           <div className="bg-gov-saffron mx-auto mt-4 h-1 w-20 rounded-full" />
@@ -125,7 +125,7 @@ export default function ContactUs() {
                       </p>
 
                       <p className="mt-0.5 text-xs leading-relaxed font-bold text-slate-700">
-                        Main Bazar, Nagar Panchayat, Bhargain, Kashganj Uttar
+                        Main Bazar, Nagar Panchayat, Chhata , Mathura, Uttar
                         Pradesh, 250606
                       </p>
                     </div>
@@ -163,10 +163,10 @@ export default function ContactUs() {
                       </p>
 
                       <Link
-                        href="mailto:npasarai@gmail.com"
+                        href="mailto:npchhata@gmail.com"
                         className="mt-0.5 block text-xs font-black text-slate-700 hover:underline"
                       >
-                        bhargain@gmail.com
+                        chhata@gmail.com
                       </Link>
                     </div>
                   </div>
@@ -245,8 +245,8 @@ export default function ContactUs() {
                       </h3>
 
                       <p className="text-xs leading-relaxed font-semibold text-slate-500">
-                        Thank you for reaching out to Nagar Panchayat, Bhargain
-                        , Kasganj. We have logged your enquiry, and our desk
+                        Thank you for reaching out to Nagar Panchayat, Chhata
+                        ,Mathura. We have logged your enquiry, and our desk
                         officer will contact you within 24-48 working hours.
                       </p>
                     </motion.div>
@@ -461,12 +461,12 @@ export default function ContactUs() {
               </h2>
 
               <p className="text-xs font-semibold text-slate-400">
-                Navigate directly to Nagar Panchayat Office, Bhargain , Kasganj.
+                Navigate directly to Nagar Panchayat Office, Chhata, Mathura.
               </p>
             </div>
 
             <Link
-              href="https://maps.app.goo.gl/8gvd4g4qdTn9u81X9"
+              href="https://www.google.com/maps/place/Chhata+Rural,+Uttar+Pradesh+281401/@27.7283715,77.4872994,14z/data=!3m1!4b1!4m6!3m5!1s0x397315870e3c703f:0xbf95b8951b3201e0!8m2!3d27.7225032!4d77.495443!16zL20vMGYwbm5r?entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="flex shrink-0 items-center gap-2 rounded-xl border border-slate-200 bg-slate-100 px-4 py-2 text-xs font-bold text-slate-700 transition-all hover:bg-slate-200"
@@ -479,12 +479,12 @@ export default function ContactUs() {
 
           <div className="group relative h-[380px] w-full overflow-hidden rounded-2xl border border-slate-100">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.5!2d78.5!3d27.85!2m3!1f0!2f0!3f0!3m2!1i1025!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zQrCnbGFyZ2FpbiwgS2FzZ2Fuag!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.4227727146524!2d77.49325407549721!3d27.722503224403756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397315870e3c703f%3A0xbf95b8951b3201e0!2sNagar%20Panchayat%20chhata!5e0!3m2!1sen!2sin!4v1723890000000!5m2!1sen!2sin"
               className="h-full w-full border-0 grayscale transition-all duration-500 hover:grayscale-0"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Nagar Panchayat Bhargain Kasganj Location Map"
+              title="Nagar Panchayat Chhata , Mathura Location Map"
             />
           </div>
         </div>

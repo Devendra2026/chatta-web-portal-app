@@ -1,10 +1,10 @@
 "use client"
 
-import type { ColumnDef, StockFeatures } from "@tanstack/react-table"
+import type { ColumnDef} from "@tanstack/react-table"
 import type { Grievance } from "@/types/public-grievance"
 import GrievanceActions from "./Grievance-Actions"
 
-export const grievanceColumns: ColumnDef<StockFeatures, Grievance>[] = [
+export const grievanceColumns: ColumnDef<Grievance>[] = [
   {
     id: "serialNumber",
     header: "Sr. No.",

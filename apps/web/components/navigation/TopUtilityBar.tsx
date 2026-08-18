@@ -10,7 +10,7 @@ export default function TopUtilityBar() {
     // Screen reader accessibility message helper
     if ("speechSynthesis" in window) {
       const speech = new SpeechSynthesisUtterance(
-        "Screen Reader Access enabled. Welcome to Nagar Panchayat , Bhargain, Kashganj , Uttar Pradesh."
+        "Screen Reader Access enabled. Welcome to Nagar Panchayat , Chhata, Mathura , Uttar Pradesh."
       )
       speech.rate = 1.0
       window.speechSynthesis.speak(speech)

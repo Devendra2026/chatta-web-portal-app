@@ -174,7 +174,7 @@ export default function PublicGrievance() {
               </h2>
 
               <p className="text-xs leading-relaxed font-semibold text-slate-600 md:text-sm">
-                Nagar Panchayat, Bhargain is committed to delivering a
+                Nagar Panchayat,Chhata , Mathura is committed to delivering a
                 responsive and responsible grievance redressal ecosystem.
                 Citizens are encouraged to report issues related to sanitation,
                 water supply, drainage, street lighting, road maintenance,
